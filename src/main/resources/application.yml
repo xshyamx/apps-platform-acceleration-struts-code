@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+
+  datasource:
+   url: ${cloud.services.struts-mysql.connection.jdbcurl:jdbc:h2:mem:struts-db}
+   username: ${cloud.services.struts-mysql.connection.username:sa}
+   password: ${cloud.services.struts-mysql.connection.password:}
