@@ -61,6 +61,7 @@ public class ListAllUsers {
         this.id = id;
     }
 
+    @SuppressWarnings("unchecked")
     public String execute() {
         try {
             this.users = service.findAll();

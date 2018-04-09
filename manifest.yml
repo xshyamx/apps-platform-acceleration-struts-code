@@ -1,0 +1,8 @@
+applications:
+- name: struts-replatform
+  path: target/struts.war
+  buildpack: java_buildpack_offline
+  instances: 1
+  random-route: true
+  services:
+  - struts-mysql

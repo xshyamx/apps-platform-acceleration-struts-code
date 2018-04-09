@@ -6,7 +6,6 @@ spring:
     show-sql: true
 
   datasource:
-   platform: ${cloud.services.struts-mysql.tags[0]:h2}
    url: ${cloud.services.struts-mysql.connection.jdbcurl:jdbc:h2:mem:struts-db}
    username: ${cloud.services.struts-mysql.connection.username:sa}
    password: ${cloud.services.struts-mysql.connection.password:}
@@ -15,3 +14,8 @@ struts:
   action:
     packages:
     - com.lq
+---
+spring:
+  profiles: local
+  datasource:
+    platform: h2

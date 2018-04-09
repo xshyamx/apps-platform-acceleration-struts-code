@@ -19,7 +19,6 @@ package org.superbiz.struts;
 
 import org.springframework.stereotype.Repository;
 
-import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
@@ -38,6 +37,7 @@ public class UserServiceImpl implements UserService {
         return manager.find(User.class, id);
     }
 
+    @SuppressWarnings("unchecked")
     public List<User> findAll() {
         return manager.createQuery("select u from User u").getResultList();
     }

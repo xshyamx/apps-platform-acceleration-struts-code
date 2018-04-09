@@ -25,5 +25,5 @@ public interface UserService {
 
     public User find(long id);
 
-    public List<User> findAll();
+    public List findAll();
 }
