@@ -9,3 +9,8 @@ spring:
    url: ${cloud.services.struts-mysql.connection.jdbcurl:jdbc:h2:mem:struts-db}
    username: ${cloud.services.struts-mysql.connection.username:sa}
    password: ${cloud.services.struts-mysql.connection.password:}
+
+struts:
+  action:
+    packages:
+    - com.lq
