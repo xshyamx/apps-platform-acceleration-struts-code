@@ -1,0 +1,22 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: maven
+    tag: '3.5.3-jdk-8'
+
+inputs:
+  - name: apps-platform-acceleration-struts-code
+  - name: version
+
+outputs:
+  - name: build-output
+
+run:
+  path: bash
+  args:
+  - -exc
+  - |
+    cd apps-platform-acceleration-struts-code
+    cp target/struts.war ../build-output/struts-$(cat ../version/number).war
