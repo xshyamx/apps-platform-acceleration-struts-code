@@ -19,4 +19,5 @@ run:
   - -exc
   - |
     cd apps-platform-acceleration-struts-code
+    mvn package
     cp target/struts.war ../build-output/struts-$(cat ../version/number).war
